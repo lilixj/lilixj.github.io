@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>leetcode_record</title>
+      <link href="/posts/63c3abbd.html"/>
+      <url>/posts/63c3abbd.html</url>
+      
+        <content type="html"><![CDATA[<p><strong>2021-1-21</strong>：有趣的一题，看了答案才发现确实是简单题！</p><p><strong>题目</strong>：二进制手表顶部有 4 个 LED 代表 <strong>小时（0-11）</strong>，底部的 6 个 LED 代表 <strong>分钟（0-59）</strong>。每个 LED 代表一个 0 或 1，最低位在右侧。</p><p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2021/03/29/binary_clock_samui_moon.jpg" alt="img"></p><p>给你一个整数 turnedOn ，表示当前亮着的 LED 的数量，返回二进制手表可以表示的所有可能时间。你可以 按任意顺序 返回答案。</p><p>小时不会以零开头：</p><p>例如，”01:00” 是无效的时间，正确的写法应该是 “1:00” 。<br>分钟必须由两位数组成，可能会以零开头：</p><p>例如，”10:2” 是无效的时间，正确的写法应该是 “10:02” 。</p><pre class="language-te" data-language="te"><code class="language-te">示例 1：输入：turnedOn &#x3D; 1输出：[&quot;0:01&quot;,&quot;0:02&quot;,&quot;0:04&quot;,&quot;0:08&quot;,&quot;0:16&quot;,&quot;0:32&quot;,&quot;1:00&quot;,&quot;2:00&quot;,&quot;4:00&quot;,&quot;8:00&quot;]示例 2：输入：turnedOn &#x3D; 9输出：[]提示：0 &lt;&#x3D; turnedOn &lt;&#x3D; 10</code></pre><p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/binary-watch">https://leetcode-cn.com/problems/binary-watch</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> leetcode </tag>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo-FAQ</title>
+      <link href="/posts/90f0f1a2.html"/>
+      <url>/posts/90f0f1a2.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="HEXO配置过程中遇到的问题"><a href="#HEXO配置过程中遇到的问题" class="headerlink" title="HEXO配置过程中遇到的问题"></a>HEXO配置过程中遇到的问题</h1><h3 id="hexo代码块显示异常"><a href="#hexo代码块显示异常" class="headerlink" title="hexo代码块显示异常"></a>hexo代码块显示异常</h3><p>使用matery主题后，代码块的行号和内容分开，如下图：</p><p><img src="/posts/90f0f1a2/wrong_code-16423291422241.png"></p><p>使用<a href="https://blog.csdn.net/Withdraw_end">Drun1baby</a>推荐的方法：</p><p><img src="/posts/90f0f1a2/code_sloved-16423291527762.jpg"></p><p>对博客根目录的_config.yml的对应位置，进行如图所示配置后，问题并未解决。</p><p>后又通过github找到一个主题为“代码高亮失效”的<a href="(https://github.com/miccall/hexo-theme-Mic_Theme/issues/3)%EF%BC%8C%E5%85%B6%E4%B8%AD%5BTinyCalf%5D(https://github.com/miccall/hexo-theme-Mic_Theme/issues/3#issuecomment-328080498">issue</a>提到：</p><blockquote><p>我发现了，这样写就正常了，和prism的版本也有关系，我用的是从官网定制的</p><pre class="language-sh" data-language="sh"><code class="language-sh">&#96;&#96;&#96;lang-javascriptcode\&#96;&#96;&#96;</code></pre><p>要加个前缀 lang-</p></blockquote><p>于是，我在出错文件的代码块也加上了前缀，重新编译并发布后，问题解决！后又将lang-删掉，再次编译，也不再出现之前的问题。神奇！</p><h3 id="中文乱码"><a href="#中文乱码" class="headerlink" title="中文乱码"></a><a href="https://blog.csdn.net/Crazy_Diamond_/article/details/114902456">中文乱码</a></h3><ol><li><p><strong>网页名字乱码</strong></p><p>原因：站点配置文件没有使用utf-8编码而导致的中文乱码。</p><p>解决办法：将站点配置文件另存为utf-8格式。</p></li><li><p>博客内容乱码：</p><p>原因：markdown文件不是utf-8编码</p><p>解决办法：markdown文件另存为utf-8格式。</p></li></ol><h3 id="点击文章后总是跳转到undefined-html"><a href="#点击文章后总是跳转到undefined-html" class="headerlink" title="点击文章后总是跳转到undefined.html"></a><a href="https://github.com/rozbo/hexo-abbrlink/issues/7">点击文章后总是跳转到undefined.html</a></h3><p><strong>原因：</strong>没有该文章对应的html文件</p><p><strong>解决办法：</strong></p><ol><li><p>安装hexo-abbrlink插件</p><pre class="language-sh" data-language="sh"><code class="language-sh">npm install hexo-abbrlink --save</code></pre></li><li><p><a href="https://github.com/rozbo/hexo-abbrlink/issues/7#issuecomment-419828868">清除缓存并编译</a></p><pre class="language-sh" data-language="sh"><code class="language-sh">hexo clean &amp;&amp; hexo g</code></pre></li></ol><h3 id="引用本地图片不显示"><a href="#引用本地图片不显示" class="headerlink" title="引用本地图片不显示"></a>引用本地图片不显示</h3><p>原因：<a href="https://github.com/rozbo/hexo-abbrlink/issues/19">abbrlink和hexo-asset-image插件冲突</a></p><p>解决办法：foreveryang321修改的<a href="https://github.com/foreveryang321/hexo-asset-image">hexo-asset-image</a>库</p><p>注：但是在实际过程中发现图片的路径多了一级目录，通过在源代码中进行关键词搜索，发现是_config.yml中的url多设置了一级。</p><p>修改后，问题解决，图片正常显示！</p><h3 id="hexo-server-“Cannot-GET-“"><a href="#hexo-server-“Cannot-GET-“" class="headerlink" title="hexo server “Cannot GET /“"></a><a href="https://blog.css8.cn/post/10783296.html">hexo server “Cannot GET /“</a></h3><blockquote><p>在Hexo博客中，出现Cannot GET/xxx错误便意味着xxx文件未被找到。Cannot GET/xxx错误本质是hexo server返回的一个404错误。开始查找原因 网上说是由于2.6以后就更新了，我们需要手动配置些东西，我们需要输入下面三行命令：</p><pre class="language-sh" data-language="sh"><code class="language-sh">npm install hexo-renderer-ejs --savenpm install hexo-renderer-stylus --savenpm install hexo-renderer-marked--save</code></pre><p>三条命令执行完这时候重新启动本地服务再访问</p></blockquote><p>问题解决，可以正常访问！</p><h3 id="如何使用GitPages部署网站"><a href="#如何使用GitPages部署网站" class="headerlink" title="如何使用GitPages部署网站"></a>如何使用GitPages部署网站</h3><p>由于某些原因，现在github的主分支名不再以master命令，为简单起见，在hexo根目录的_config.yml文件中：</p><pre class="language-yml" data-language="yml"><code class="language-yml">deploy:  type: git  repository: git@github.com:你的用户名&#x2F;你的用户名.github.io.git  branch: main</code></pre><p>将远程分支直接设为main。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>flash-linux0.11-talk笔记</title>
+      <link href="/posts/d93cc07a.html"/>
+      <url>/posts/d93cc07a.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Bootsec-s关键点"><a href="#Bootsec-s关键点" class="headerlink" title="Bootsec .s关键点"></a>Bootsec .s关键点</h2><p>原文链接：<a href="https://github.com/sunym1993/flash-linux0.11-talk">https://github.com/sunym1993/flash-linux0.11-talk</a></p><h3 id="第一回-最开始的两行代码"><a href="#第一回-最开始的两行代码" class="headerlink" title="第一回 最开始的两行代码"></a>第一回 最开始的两行代码</h3><p>当你按下开机键的那一刻，在主板上提前写死的固件程序 <strong>BIOS</strong> 会将硬盘中<strong>启动区的 512 字节</strong>的数据，原封不动复制到<strong>内存中的 0x7c00</strong> 这个位置，并跳转到那个位置进行执行。</p><img src="/posts/d93cc07a/fig1.png" alt="图片" style="zoom:100%;"><p><em>启动区</em>：硬盘中的0盘0道1扇区的512个字节的最后两个字节分别是0x55和0xaa。</p><pre class="language-assembly" data-language="assembly"><code class="language-assembly">mov ax,0x07c0mov ds,ax</code></pre><img src="/posts/d93cc07a/fig2.png" alt="图片" style="zoom:100%;"><h3 id="第二回-给自己挪个地儿"><a href="#第二回-给自己挪个地儿" class="headerlink" title="第二回 给自己挪个地儿"></a>第二回 给自己挪个地儿</h3><pre class="language-assembly" data-language="assembly"><code class="language-assembly">:mov ax,0x07c0:mov ds,axmov ax,0x9000mov es,axmov cx,#256sub si,sisub di,direp movw</code></pre><p> <strong>movw</strong> 表示复制一个<strong>字</strong>（word 16位），那其实就是<strong>不断重复地复制一个字</strong>。</p><p>那下面自然就有三连问：</p><p><strong>重复执行多少次呢？</strong>是 cx 寄存器中的值，也就是 256 次。</p><p><strong>从哪复制到哪呢？</strong>是从 ds:si 处复制到 es:di 处。</p><p><strong>一次复制多少呢？</strong>刚刚说过了，复制一个字，16 位，也就是两个字节。 </p><p>“<strong>将内存地址 0x7c00 处开始往后的 512 字节的数据，原封不动复制到 0x90000 处</strong>。”</p><p><img src="/posts/d93cc07a/fig3.png"></p><pre class="language-assembly" data-language="assembly"><code class="language-assembly">jmpi go,0x9000go:  mov ax,cs  mov ds,ax</code></pre><p><strong>jmpi</strong> 是一个<strong>段间跳转指令</strong>，表示跳转到 <strong>0x9000:go</strong> 处执行。</p><img src="/posts/d93cc07a/fig4.png" alt="图片" style="zoom:100%;"><h3 id="第三回-做好最最基础的准备工作"><a href="#第三回-做好最最基础的准备工作" class="headerlink" title="第三回 做好最最基础的准备工作"></a>第三回 做好最最基础的准备工作</h3><pre class="language-assembly" data-language="assembly"><code class="language-assembly">go: mov ax,cs    mov ds,ax    mov es,ax    mov ss,ax    mov sp,#0xFF00</code></pre><p>都做了些啥事呢？</p><p><strong>第一</strong>，代码从硬盘移到内存，又从内存挪了个地方，放在了 <strong>0x90000</strong> 处。</p><p><strong>第二</strong>，<strong>数据段寄存器 ds</strong> 和<strong>代码段寄存器 cs</strong> 此时都被设置为了 0x9000，也就为跳转代码和访问内存数据，奠定了同一个内存的基址地址，方便了跳转和内存访问，因为仅仅需要指定偏移地址即可了。</p><p><strong>第三</strong>，栈顶地址被设置为了 0x9FF00，具体表现为<strong>栈段寄存器 ss</strong> 为 0x9000，<strong>栈基址寄存器 sp</strong> 为 0xFF00。栈是向下发展的，这个栈顶地址 0x9FF00 要远远大于此时代码所在的位置 0x90000，所以栈向下发展就很难撞见代码所在的位置，也就比较安全。这也是为什么给栈顶地址设置为这个值的原因，其实只需要离代码的位置远远的即可。</p><p>其实就是分别设置<strong>代码段寄存器 cs</strong>，<strong>数据段寄存器 ds</strong>，<strong>栈段寄存器 ss</strong> 和<strong>栈基址寄存器 sp</strong> 的值。</p><p>其实操作系统在做的事情，就是给如何访问代码，如何访问数据，如何访问栈进行了一下<strong>内存的初步规划</strong>。其中访问代码和访问数据的规划方式就是设置了一个<strong>基址</strong>而已，访问栈就是把<strong>栈顶指针</strong>指向了一个远离代码位置的地方而已。</p><img src="/posts/d93cc07a/fig5.png" alt="图片" style="zoom:100%;"><h3 id="第四回-把自己在硬盘里的其他部分也放到内存来"><a href="#第四回-把自己在硬盘里的其他部分也放到内存来" class="headerlink" title="第四回 把自己在硬盘里的其他部分也放到内存来"></a>第四回 把自己在硬盘里的其他部分也放到内存来</h3><img src="/posts/d93cc07a/fig6.png" alt="图片" style="zoom:100%;"><p>“简单说，就是设置了如何访问数据的<strong>数据</strong>段，如何访问代码的<strong>代码</strong>段，以及如何访问栈的<strong>栈顶</strong>指针，也即初步做了一次<strong>内存规划</strong>，从 CPU 的角度看，访问内存，就这么三块地方而已。”</p><p>接下来：</p><pre class="language-assembly" data-language="assembly"><code class="language-assembly">load_setup:    mov dx,#0x0000      ; drive 0, head 0    mov cx,#0x0002      ; sector 2, track 0    mov bx,#0x0200      ; address &#x3D; 512, in 0x9000    mov ax,#0x0200+4    ; service 2, nr of sectors    int 0x13            ; read it, start interrupt of number 0x13    jnc ok_load_setup       ; ok - continue    mov dx,#0x0000    mov ax,#0x0000      ; reset the diskette    int 0x13    jmp load_setupok_load_setup:    ...</code></pre><p>作用：<strong>就是将硬盘的第 2 个扇区开始，把数据加载到内存 0x90200 处，共加载 4 个扇区</strong>。</p><p><img src="/posts/d93cc07a/fig7.png"></p><pre class="language-assembly" data-language="assembly"><code class="language-assembly">ok_load_setup:    ...    mov ax,#0x1000    mov es,ax       ; segment of 0x10000    call read_it    ...    jmpi 0,0x9020</code></pre><p>作用：<strong>把从硬盘第 6 个扇区开始往后的 240 个扇区，加载到内存 0x10000 处</strong>。</p><p><img src="/posts/d93cc07a/fig8.png"></p><p>整个操作系统的编译过程说下。整个编译过程，就是通过 <strong>Makefile</strong> 和 <strong>build.c</strong> 配合完成的，最终会：</p><p><em><strong>1.</strong></em> 把 bootsect.s 编译成 bootsect 放在硬盘的 1 扇区。</p><p><em><strong>2.</strong></em> 把 setup.s 编译成 setup 放在硬盘的 2~5 扇区。</p><p><em><strong>3.</strong></em> 把剩下的全部代码（head.s 作为开头）编译成 system 放在硬盘的随后 240 个扇区。</p><p><img src="/posts/d93cc07a/fig9.png"></p><h2 id="setup-s"><a href="#setup-s" class="headerlink" title="setup.s"></a>setup.s</h2><h3 id="第五回-进入保护模式前的最后一次折腾内存"><a href="#第五回-进入保护模式前的最后一次折腾内存" class="headerlink" title="第五回 进入保护模式前的最后一次折腾内存"></a>第五回 进入保护模式前的最后一次折腾内存</h3><pre class="language-assembly" data-language="assembly"><code class="language-assembly">start:    mov ax,#0x9000  ; this is done in bootsect already, but...    mov ds,ax    mov ah,#0x03    ; read cursor pos    xor bh,bh    int 0x10        ; save it in known place, con_init fetches    mov [0],dx      ; it from 0x90000.</code></pre><p><img src="/posts/d93cc07a/fig10.png"></p><p>这里说明一下：计算机在加电自检后会自动初始化到文字模式，在这种模式下，一屏幕可以显示 25 行，每行 80 个字符，也就是 80 列。</p><p>那下一步 <strong>mov [0],dx</strong> 就是把这个光标位置存储在 [0] 这个内存地址处。注意，前面我们说过，这个内存地址仅仅是偏移地址，还需要加上 ds 这个寄存器里存储的段基址，最终的内存地址是在 <strong>0x90000</strong> 处，这里存放着光标的位置，以便之后在初始化控制台的时候用到。</p><p>所以从这里也可以看出，这和我们平时调用一个方法没什么区别，只不过这里的<strong>寄存器</strong>的用法相当于<strong>入参和返回值</strong>，这里的 <strong>0x10 中断号</strong>相当于<strong>方法名</strong>。</p><table><thead><tr><th>内存地址</th><th>长度(字节)</th><th>名称</th></tr></thead><tbody><tr><td>0x90000</td><td>2</td><td>光标位置</td></tr><tr><td>0x90002</td><td>2</td><td>扩展内存数</td></tr><tr><td>0x90004</td><td>2</td><td>显示页面</td></tr><tr><td>0x90006</td><td>1</td><td>显示模式</td></tr><tr><td>0x90007</td><td>1</td><td>字符列数</td></tr><tr><td>0x90008</td><td>2</td><td>未知</td></tr><tr><td>0x9000A</td><td>1</td><td>显示内存</td></tr><tr><td>0x9000B</td><td>1</td><td>显示状态</td></tr><tr><td>0x9000C</td><td>2</td><td>显卡特性参数</td></tr><tr><td>0x9000E</td><td>1</td><td>屏幕行数</td></tr><tr><td>0x9000F</td><td>1</td><td>屏幕列数</td></tr><tr><td>0x90080</td><td>16</td><td>硬盘1参数表</td></tr><tr><td>0x90090</td><td>16</td><td>硬盘2参数表</td></tr><tr><td>0x901FC</td><td>2</td><td>根设备号</td></tr></tbody></table><pre class="language-assembly" data-language="assembly"><code class="language-assembly">cli         ; no interrupts allowed ;</code></pre><pre class="language-assembly" data-language="assembly"><code class="language-assembly">; first we move the system to it&#39;s rightful place    mov ax,#0x0000    cld         ; &#39;direction&#39;&#x3D;0, movs moves forwarddo_move:    mov es,ax       ; destination segment    add ax,#0x1000    cmp ax,#0x9000    jz  end_move    mov ds,ax       ; source segment    sub di,di    sub si,si    mov cx,#0x8000    rep movsw    jmp do_move; then we load the segment descriptorsend_move:    ...</code></pre><p><img src="/posts/d93cc07a/fig11.png"></p><p>由于之前的各种加载和复制，导致内存看起来很乱，是时候进行一波取舍和整理了，我们重新梳理一下此时的内存布局。</p><p>栈顶地址仍然是 <strong>0x9FF00</strong> 没有改变。</p><p><strong>0x90000</strong> 开始往上的位置，原来是 <strong>bootsect</strong> 和 <strong>setup</strong> 程序的代码，现 bootsect 的一部分代码在已经被操作系统为了记录内存、硬盘、显卡等一些<strong>临时存放的</strong>数据给覆盖了一部分。</p><p>内存最开始的 <strong>0</strong> 到 <strong>0x80000</strong> 这 512K 被 <strong>system</strong> 模块给占用了，之前讲过，这个 system 模块就是除了 bootsect 和 setup 之外的全部程序链接在一起的结果，可以理解为<strong>操作系统的全部</strong>。</p><p><img src="/posts/d93cc07a/fig12.png"></p><p>[1]: </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 操作系统 </category>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 操作系统 </tag>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/posts/4a17b156.html"/>
+      <url>/posts/4a17b156.html</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo new &quot;My New Post&quot;</code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="language-bash" data-language="bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
