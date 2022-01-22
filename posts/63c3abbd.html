@@ -669,7 +669,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    802
+                    786
                 </div>
                 
 
@@ -695,7 +695,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h4 id="二进制手表（有趣的一题）"><a href="#二进制手表（有趣的一题）" class="headerlink" title="二进制手表（有趣的一题）"></a><strong>二进制手表</strong>（有趣的一题）</h4><p>二进制手表顶部有 4 个 LED 代表 <strong>小时（0-11）</strong>，底部的 6 个 LED 代表 <strong>分钟（0-59）</strong>。每个 LED 代表一个 0 或 1，最低位在右侧。</p>
-<p><img src="./images/loading.gif" data-original="/posts/63c3abbd/image-20220121235438364.png" alt="（图源：WikiMedia - Binary clock samui moon.jpg ，许可协议：Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) ）"></p>
+<p><img src="./images/loading.gif" data-original="/posts/63c3abbd/image1.png" alt="（图源：WikiMedia - Binary clock samui moon.jpg ，许可协议：Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) ）"></p>
 <p>给你一个整数 turnedOn ，表示当前亮着的 LED 的数量，返回二进制手表可以表示的所有可能时间。你可以 按任意顺序 返回答案。</p>
 <p>小时不会以零开头：</p>
 <p>例如，”01:00” 是无效的时间，正确的写法应该是 “1:00” 。<br>分钟必须由两位数组成，可能会以零开头：</p>
@@ -717,34 +717,19 @@
 <p>「子序列」定义：如果一个字符串可以通过删除原字符串某些字符而不改变原字符顺序得到，那么这个字符串就是原字符串的一个子序列。</p>
 <p>「回文」定义：如果一个字符串向后和向前读是一致的，那么这个字符串就是一个回文。</p>
 <p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/remove-palindromic-subsequences">https://leetcode-cn.com/problems/remove-palindromic-subsequences</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
-<pre class="language-c++" data-language="c++"><code class="language-c++">&#96;&#96;&#96;
-
-#### **最长回文串**
-
-给定一个包含大写字母和小写字母的字符串，找到通过这些字母构造成的最长的回文串。
-
-在构造过程中，请注意区分大小写。比如 &quot;Aa&quot; 不能当做一个回文字符串。
-
-注意:
-假设字符串的长度不会超过 1010。
-
-来源：力扣（LeetCode）
-链接：https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;longest-palindrome
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
-
-**解题思路**
-数据结构：哈希集合
-
-解决思路：
-
-1. 某个字符出现两次，可加入回文字符串；
-2. 用过的字符需要删除，遇到新的重新添加到哈希表中；
-3. 遍历完原字符串后，检查哈希集合是否为空（是否有字符是奇数个，被剩下了），如不是，则加上一个字符长度，否则不处理
-
-代码
-
-&#96;&#96;&#96;c++
-class Solution &#123;
+<h4 id="最长回文串"><a href="#最长回文串" class="headerlink" title="最长回文串"></a><strong>最长回文串</strong></h4><p>给定一个包含大写字母和小写字母的字符串，找到通过这些字母构造成的最长的回文串。</p>
+<p>在构造过程中，请注意区分大小写。比如 “Aa” 不能当做一个回文字符串。</p>
+<p>注意:<br>假设字符串的长度不会超过 1010。</p>
+<p>来源：力扣（LeetCode）<br>链接：<a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/longest-palindrome">https://leetcode-cn.com/problems/longest-palindrome</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<p><strong>解题思路</strong><br>数据结构：哈希集合</p>
+<p>解决思路：</p>
+<ol>
+<li>某个字符出现两次，可加入回文字符串；</li>
+<li>用过的字符需要删除，遇到新的重新添加到哈希表中；</li>
+<li>遍历完原字符串后，检查哈希集合是否为空（是否有字符是奇数个，被剩下了），如不是，则加上一个字符长度，否则不处理</li>
+</ol>
+<p>代码</p>
+<pre class="language-c++" data-language="c++"><code class="language-c++">class Solution &#123;
 public:
     int longestPalindrome(string s) &#123;
         int cnt &#x3D; 0;
