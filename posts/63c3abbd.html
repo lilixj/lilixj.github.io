@@ -669,7 +669,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    803
+                    802
                 </div>
                 
 
@@ -694,9 +694,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>2021-1-21</strong>：<strong>二进制手表</strong>（有趣的一题）</p>
-<p><strong>题目</strong>：二进制手表顶部有 4 个 LED 代表 <strong>小时（0-11）</strong>，底部的 6 个 LED 代表 <strong>分钟（0-59）</strong>。每个 LED 代表一个 0 或 1，最低位在右侧。</p>
-<p><img src="./images/loading.gif" data-original="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2021/03/29/binary_clock_samui_moon.jpg" alt="img"></p>
+                <h4 id="二进制手表（有趣的一题）"><a href="#二进制手表（有趣的一题）" class="headerlink" title="二进制手表（有趣的一题）"></a><strong>二进制手表</strong>（有趣的一题）</h4><p>二进制手表顶部有 4 个 LED 代表 <strong>小时（0-11）</strong>，底部的 6 个 LED 代表 <strong>分钟（0-59）</strong>。每个 LED 代表一个 0 或 1，最低位在右侧。</p>
+<p><img src="./images/loading.gif" data-original="/posts/63c3abbd/image-20220121235438364.png" alt="（图源：WikiMedia - Binary clock samui moon.jpg ，许可协议：Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0) ）"></p>
 <p>给你一个整数 turnedOn ，表示当前亮着的 LED 的数量，返回二进制手表可以表示的所有可能时间。你可以 按任意顺序 返回答案。</p>
 <p>小时不会以零开头：</p>
 <p>例如，”01:00” 是无效的时间，正确的写法应该是 “1:00” 。<br>分钟必须由两位数组成，可能会以零开头：</p>
@@ -733,16 +732,18 @@
 链接：https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problems&#x2F;longest-palindrome
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
-&#96;&#96;&#96;&#96;
-### 解题思路
-**哈希集合**
+**解题思路**
+数据结构：哈希集合
+
+解决思路：
+
 1. 某个字符出现两次，可加入回文字符串；
 2. 用过的字符需要删除，遇到新的重新添加到哈希表中；
 3. 遍历完原字符串后，检查哈希集合是否为空（是否有字符是奇数个，被剩下了），如不是，则加上一个字符长度，否则不处理
 
-### 代码
+代码
 
-&#96;&#96;&#96;cpp
+&#96;&#96;&#96;c++
 class Solution &#123;
 public:
     int longestPalindrome(string s) &#123;
@@ -764,8 +765,7 @@ public:
         return ss.empty()?cnt:cnt+1;
     &#125;
 &#125;;</code></pre>
-<pre><code>
-</code></pre>
+
 
                 
             </div>
