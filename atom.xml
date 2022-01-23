@@ -6,7 +6,7 @@
   <link href="https://lilixj.github.io/atom.xml" rel="self"/>
   
   <link href="https://lilixj.github.io/"/>
-  <updated>2022-01-22T12:48:42.872Z</updated>
+  <updated>2022-01-23T08:16:57.211Z</updated>
   <id>https://lilixj.github.io/</id>
   
   <author>
@@ -17,18 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>binarySearch</title>
+    <link href="https://lilixj.github.io/posts/85084146.html"/>
+    <id>https://lilixj.github.io/posts/85084146.html</id>
+    <published>2022-01-22T15:23:16.000Z</published>
+    <updated>2022-01-23T08:16:57.211Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;二分查找&quot;&gt;&lt;a href=&quot;#二分查找&quot; class=&quot;headerlink&quot; title=&quot;二分查找&quot;&gt;&lt;/a&gt;二分查找&lt;/h2&gt;&lt;h3 id=&quot;最简单的二分查找&quot;&gt;&lt;a href=&quot;#最简单的二分查找&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="leetcode" scheme="https://lilixj.github.io/tags/leetcode/"/>
+    
+    <category term="算法" scheme="https://lilixj.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>leetcode_record</title>
     <link href="https://lilixj.github.io/posts/63c3abbd.html"/>
     <id>https://lilixj.github.io/posts/63c3abbd.html</id>
     <published>2022-01-21T15:52:44.000Z</published>
-    <updated>2022-01-22T12:48:42.872Z</updated>
+    <updated>2022-01-23T00:57:48.564Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h4 id=&quot;二进制手表（有趣的一题）&quot;&gt;&lt;a href=&quot;#二进制手表（有趣的一题）&quot; class=&quot;headerlink&quot; title=&quot;二进制手表（有趣的一题）&quot;&gt;&lt;/a&gt;&lt;strong&gt;二进制手表&lt;/strong&gt;（有趣的一题）&lt;/h4&gt;&lt;p&gt;二进制手表顶部有 4 个</summary>
+    <summary type="html">&lt;h4 id=&quot;401-二进制手表&quot;&gt;&lt;a href=&quot;#401-二进制手表&quot; class=&quot;headerlink&quot; title=&quot;401. 二进制手表&quot;&gt;&lt;/a&gt;&lt;a</summary>
         
       
     
